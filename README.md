@@ -19,6 +19,8 @@ This demo application can be accessed via `TcaTransitions.xcworkspace`
 ### Circle Transition
 
 ```swift
+import TCATransitions
+
 ZStack {
   // Content "underneath" the new transition
   MyRootView()
