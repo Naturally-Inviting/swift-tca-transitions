@@ -9,7 +9,7 @@ let package = Package(
         .iOS(.v16)
     ],
     products: [
-        .library(name: "CircleTransition", targets: ["CircleTransition"]),
+        .library(name: "TCATransitions", targets: ["TCATransitions"]),
     ],
     dependencies: [
         .package(
@@ -19,7 +19,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "CircleTransition",
+            name: "TCATransitions",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ]

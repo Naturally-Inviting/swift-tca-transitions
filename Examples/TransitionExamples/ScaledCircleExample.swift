@@ -1,8 +1,8 @@
-import CircleTransition
 import ComposableArchitecture
+import TCATransitions
 import SwiftUI
 
-struct ExampleView: View {
+struct ScaledCircleExample: View {
     let store = Store(
         initialState: CircleTransition.State(),
         reducer: CircleTransition()
@@ -36,6 +36,6 @@ struct ExampleView: View {
 // MARK: - Preview
 struct CircleTransitionView_Previews: PreviewProvider {
     static var previews: some View {
-        ExampleView()
+        ScaledCircleExample()
     }
 }

@@ -4,7 +4,7 @@ import SwiftUI
 struct TransitionExamplesApp: App {
     var body: some Scene {
         WindowGroup {
-            ExampleView()
+            ScaledCircleExample()
         }
     }
 }

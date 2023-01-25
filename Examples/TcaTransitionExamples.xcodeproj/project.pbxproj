@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		D2DCC72A29819A4F00D0FA4A /* TransitionExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCC72929819A4F00D0FA4A /* TransitionExamplesApp.swift */; };
-		D2DCC72C29819A4F00D0FA4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCC72B29819A4F00D0FA4A /* ContentView.swift */; };
+		D2DCC72C29819A4F00D0FA4A /* ScaledCircleExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DCC72B29819A4F00D0FA4A /* ScaledCircleExample.swift */; };
 		D2DCC72E29819A5000D0FA4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2DCC72D29819A5000D0FA4A /* Assets.xcassets */; };
 		D2DCC73129819A5000D0FA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2DCC73029819A5000D0FA4A /* Preview Assets.xcassets */; };
-		D2DCC73929819AD600D0FA4A /* CircleTransition in Frameworks */ = {isa = PBXBuildFile; productRef = D2DCC73829819AD600D0FA4A /* CircleTransition */; };
 		D2DCC73C29819B2300D0FA4A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D2DCC73B29819B2300D0FA4A /* ComposableArchitecture */; };
 		D2DCC73E29819B2300D0FA4A /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = D2DCC73D29819B2300D0FA4A /* Dependencies */; };
+		D2DCC7402981A07200D0FA4A /* TCATransitions in Frameworks */ = {isa = PBXBuildFile; productRef = D2DCC73F2981A07200D0FA4A /* TCATransitions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D2DCC72729819A4F00D0FA4A /* TransitionExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitionExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DCC72929819A4F00D0FA4A /* TransitionExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionExamplesApp.swift; sourceTree = "<group>"; };
-		D2DCC72B29819A4F00D0FA4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D2DCC72B29819A4F00D0FA4A /* ScaledCircleExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledCircleExample.swift; sourceTree = "<group>"; };
 		D2DCC72D29819A5000D0FA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2DCC73029819A5000D0FA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -30,8 +30,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2DCC73E29819B2300D0FA4A /* Dependencies in Frameworks */,
+				D2DCC7402981A07200D0FA4A /* TCATransitions in Frameworks */,
 				D2DCC73C29819B2300D0FA4A /* ComposableArchitecture in Frameworks */,
-				D2DCC73929819AD600D0FA4A /* CircleTransition in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				D2DCC72929819A4F00D0FA4A /* TransitionExamplesApp.swift */,
-				D2DCC72B29819A4F00D0FA4A /* ContentView.swift */,
+				D2DCC72B29819A4F00D0FA4A /* ScaledCircleExample.swift */,
 				D2DCC72D29819A5000D0FA4A /* Assets.xcassets */,
 				D2DCC72F29819A5000D0FA4A /* Preview Content */,
 			);
@@ -98,9 +98,9 @@
 			);
 			name = TransitionExamples;
 			packageProductDependencies = (
-				D2DCC73829819AD600D0FA4A /* CircleTransition */,
 				D2DCC73B29819B2300D0FA4A /* ComposableArchitecture */,
 				D2DCC73D29819B2300D0FA4A /* Dependencies */,
+				D2DCC73F2981A07200D0FA4A /* TCATransitions */,
 			);
 			productName = TransitionExamples;
 			productReference = D2DCC72729819A4F00D0FA4A /* TransitionExamples.app */;
@@ -159,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2DCC72C29819A4F00D0FA4A /* ContentView.swift in Sources */,
+				D2DCC72C29819A4F00D0FA4A /* ScaledCircleExample.swift in Sources */,
 				D2DCC72A29819A4F00D0FA4A /* TransitionExamplesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,10 +374,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D2DCC73829819AD600D0FA4A /* CircleTransition */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CircleTransition;
-		};
 		D2DCC73B29819B2300D0FA4A /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D2DCC73A29819B2300D0FA4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
@@ -387,6 +383,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D2DCC73A29819B2300D0FA4A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = Dependencies;
+		};
+		D2DCC73F2981A07200D0FA4A /* TCATransitions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TCATransitions;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
