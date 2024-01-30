@@ -5,30 +5,30 @@ import SwiftUI
 struct ScaledCircleExample: View {
     let store = Store(
         initialState: CircleTransition.State(),
-        reducer: CircleTransition()
+        reducer: {
+            CircleTransition()
+        }
     )
     
     var body: some View {
-        WithViewStore(store) { viewStore in
-            ZStack {
-                VStack {
-                    Text("Example")
-                    Button(
-                        "Show New View",
-                        action: { viewStore.send(.startTransition) }
-                    )
-                }
-                
-                VStack {
-                    Text("Content")
-                    Button(
-                        "Close",
-                        action: { viewStore.send(.dismissTransition) }
-                    )
-                    .foregroundColor(.white)
-                }
-                .circleTransition(store, style: Color.red.gradient)
+        ZStack {
+            VStack {
+                Text("Example")
+                Button(
+                    "Show New View",
+                    action: { store.send(.startTransition) }
+                )
             }
+            
+            VStack {
+                Text("Content")
+                Button(
+                    "Close",
+                    action: { store.send(.dismissTransition) }
+                )
+                .foregroundColor(.white)
+            }
+            .circleTransition(store, style: Color.red.gradient)
         }
     }
 }

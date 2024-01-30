@@ -1,10 +1,11 @@
 import ComposableArchitecture
 import SwiftUI
 
-public struct CircleTransition: ReducerProtocol {
+@Reducer
+public struct CircleTransition: Reducer {
     // MARK: - State
+    @ObservableState
     public struct State: Equatable {
-        
         public var circleOpacity: CGFloat
         public var circleScale: CGFloat
         public var isCircleVisible: Bool
@@ -36,7 +37,7 @@ public struct CircleTransition: ReducerProtocol {
     public init() {}
     
     // MARK: - Reducer Body
-    public func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    public func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .startTransition:
             return .run { send in

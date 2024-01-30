@@ -2,26 +2,26 @@ import ComposableArchitecture
 import SwiftUI
 
 internal struct CircleTransitionViewModifier<S>: ViewModifier where S: ShapeStyle {
-    @ObservedObject var viewStore: ViewStoreOf<CircleTransition>
+    var store: StoreOf<CircleTransition>
     
     private var shapeStyle: S
     
     internal init(
         style: S,
-        viewStore: ViewStoreOf<CircleTransition>
+        store: StoreOf<CircleTransition>
     ) {
         self.shapeStyle = style
-        self.viewStore = viewStore
+        self.store = store
     }
     
     func body(content: Content) -> some View {
         ZStack {
             Circle()
                 .fill(self.shapeStyle)
-                .scaleEffect(viewStore.circleScale)
-                .opacity(viewStore.circleOpacity)
+                .scaleEffect(store.circleScale)
+                .opacity(store.circleOpacity)
                 
-            if viewStore.isCircleVisible {
+            if store.isCircleVisible {
                 content
                     .transition(.opacity)
             }
@@ -39,7 +39,7 @@ public extension View {
             .modifier(
                 CircleTransitionViewModifier(
                     style: style,
-                    viewStore: ViewStore(store)
+                    store: store
                 )
             )
     }
